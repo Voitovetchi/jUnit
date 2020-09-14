@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Contract.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">jUnit_proj</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Contract.java</span></div><h1>Contract.java</h1><pre class="source lang-java linenums">import java.text.DecimalFormat;
+
+public class Contract {
+
+    private Team team;
+    private Player player;
+    private double contractPrice;
+    private int contractDuration;
+
+<span class="fc" id="L10">    Contract(Team teamName, Player playerName, double contractPrice, int contractDuration){</span>
+<span class="fc" id="L11">        this.player=playerName;</span>
+<span class="fc" id="L12">        this.team=teamName;</span>
+<span class="fc" id="L13">        this.contractPrice=contractPrice;</span>
+<span class="fc" id="L14">        this.contractDuration=contractDuration;</span>
+<span class="fc" id="L15">    }</span>
+
+    public void setPlayerName(Player playerName) {
+<span class="nc" id="L18">        this.player = playerName;</span>
+<span class="nc" id="L19">    }</span>
+    public void setTeamName(Team teamName) {
+<span class="nc" id="L21">        this.team = teamName;</span>
+<span class="nc" id="L22">    }</span>
+    public void setContractPrice(double contractPrice) {
+<span class="nc" id="L24">        this.contractPrice = contractPrice;</span>
+<span class="nc" id="L25">    }</span>
+    public void setContractDuration(int contractDuration) {
+<span class="nc" id="L27">        this.contractDuration = contractDuration;</span>
+<span class="nc" id="L28">    }</span>
+
+    public Player getPlayerName() {
+<span class="nc" id="L31">        return player;</span>
+    }
+    public Team getTeamName() {
+<span class="nc" id="L34">        return team;</span>
+    }
+    public double getContractPrice() {
+<span class="nc" id="L37">        return contractPrice;</span>
+    }
+    public int getContractDuration() {
+<span class="nc" id="L40">        return contractDuration;</span>
+    }
+
+    //check if all given values are valid
+    public static boolean contractIsValid(Team teamName, Player player, double contractPrice, int contractDuration){
+<span class="pc bpc" id="L45" title="3 of 8 branches missed.">        if(teamName!=null &amp;&amp; player!=null &amp;&amp; contractPrice&gt;=0 &amp;&amp; contractDuration&gt;=0)</span>
+<span class="fc" id="L46">            return true;</span>
+        else
+<span class="fc" id="L48">            return false;</span>
+    }
+
+    public double getPriceForYear(){
+<span class="fc" id="L52">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L53">        return Double.parseDouble(df2.format(this.contractPrice/this.contractDuration));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

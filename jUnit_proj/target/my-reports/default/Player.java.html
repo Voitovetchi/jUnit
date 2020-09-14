@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Player.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">jUnit_proj</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Player.java</span></div><h1>Player.java</h1><pre class="source lang-java linenums">import java.text.DecimalFormat;
+
+public class Player {
+
+    private String playerName;
+    private String position;
+    private double hits;
+    private double atBats;
+    private double rbi;
+
+<span class="fc" id="L11">    Player(String name, String position, double hits, double atBats, double rbi){</span>
+<span class="fc" id="L12">        this.playerName=name;</span>
+<span class="fc" id="L13">        this.position=position;</span>
+<span class="fc" id="L14">        this.hits=hits;</span>
+<span class="fc" id="L15">        this.atBats=atBats;</span>
+<span class="fc" id="L16">        this.rbi=rbi;</span>
+<span class="fc" id="L17">    }</span>
+
+    public void setPlayerName(String playerName) {
+<span class="nc" id="L20">        this.playerName = playerName;</span>
+<span class="nc" id="L21">    }</span>
+    public void setPosition(String position) {
+<span class="nc" id="L23">        this.position = position;</span>
+<span class="nc" id="L24">    }</span>
+    public void setHits(int hits) {
+<span class="nc" id="L26">        this.hits = hits;</span>
+<span class="nc" id="L27">    }</span>
+    public void setAtBats(int atBats) {
+<span class="nc" id="L29">        this.atBats = atBats;</span>
+<span class="nc" id="L30">    }</span>
+    public void setRbi(int rbi) {
+<span class="nc" id="L32">        this.rbi = rbi;</span>
+<span class="nc" id="L33">    }</span>
+
+    public String getPlayerName() {
+<span class="nc" id="L36">        return playerName;</span>
+    }
+    public String getPosition() {
+<span class="nc" id="L39">        return position;</span>
+    }
+    public double getHits() {
+<span class="nc" id="L42">        return hits;</span>
+    }
+    public double getAtBats() {
+<span class="nc" id="L45">        return atBats;</span>
+    }
+    public double getRbi() {
+<span class="nc" id="L48">        return rbi;</span>
+    }
+
+    //check if all given values are valid
+    public static boolean playerIsValid(String name, String position, int hits, int atBats, int rbi){
+<span class="pc bpc" id="L53" title="4 of 10 branches missed.">        if(name!=null &amp;&amp; position!=null &amp;&amp; hits&gt;=0 &amp;&amp; atBats&gt;=0 &amp;&amp; rbi&gt;=0)</span>
+<span class="fc" id="L54">            return true;</span>
+        else
+<span class="fc" id="L56">            return false;</span>
+    }
+
+    //get batting average for given player
+    public double getAvg(){
+<span class="fc" id="L61">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L62">        return Double.parseDouble(df2.format(this.hits/this.atBats));</span>
+    }
+
+    //get batters raiting for given player
+    public  double getBattersRaiting(){
+<span class="fc" id="L67">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L68">        return Double.parseDouble(df2.format(this.getAvg()+this.rbi/this.atBats));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
