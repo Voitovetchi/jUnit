@@ -7,50 +7,52 @@ public class Contract {
     private double contractPrice;
     private int contractDuration;
 
-<span class="fc" id="L10">    Contract(Team teamName, Player playerName, double contractPrice, int contractDuration){</span>
-<span class="fc" id="L11">        this.player=playerName;</span>
-<span class="fc" id="L12">        this.team=teamName;</span>
-<span class="fc" id="L13">        this.contractPrice=contractPrice;</span>
-<span class="fc" id="L14">        this.contractDuration=contractDuration;</span>
-<span class="fc" id="L15">    }</span>
+<span class="fc" id="L10">    Contract(){}</span>
+
+<span class="fc" id="L12">    Contract(Team teamName, Player playerName, double contractPrice, int contractDuration){</span>
+<span class="fc" id="L13">        this.player=playerName;</span>
+<span class="fc" id="L14">        this.team=teamName;</span>
+<span class="fc" id="L15">        this.contractPrice=contractPrice;</span>
+<span class="fc" id="L16">        this.contractDuration=contractDuration;</span>
+<span class="fc" id="L17">    }</span>
 
     public void setPlayerName(Player playerName) {
-<span class="nc" id="L18">        this.player = playerName;</span>
-<span class="nc" id="L19">    }</span>
+<span class="fc" id="L20">        this.player = playerName;</span>
+<span class="fc" id="L21">    }</span>
     public void setTeamName(Team teamName) {
-<span class="nc" id="L21">        this.team = teamName;</span>
-<span class="nc" id="L22">    }</span>
+<span class="fc" id="L23">        this.team = teamName;</span>
+<span class="fc" id="L24">    }</span>
     public void setContractPrice(double contractPrice) {
-<span class="nc" id="L24">        this.contractPrice = contractPrice;</span>
-<span class="nc" id="L25">    }</span>
+<span class="fc" id="L26">        this.contractPrice = contractPrice;</span>
+<span class="fc" id="L27">    }</span>
     public void setContractDuration(int contractDuration) {
-<span class="nc" id="L27">        this.contractDuration = contractDuration;</span>
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L29">        this.contractDuration = contractDuration;</span>
+<span class="fc" id="L30">    }</span>
 
     public Player getPlayerName() {
-<span class="nc" id="L31">        return player;</span>
+<span class="fc" id="L33">        return player;</span>
     }
     public Team getTeamName() {
-<span class="nc" id="L34">        return team;</span>
+<span class="fc" id="L36">        return team;</span>
     }
     public double getContractPrice() {
-<span class="nc" id="L37">        return contractPrice;</span>
+<span class="fc" id="L39">        return contractPrice;</span>
     }
     public int getContractDuration() {
-<span class="nc" id="L40">        return contractDuration;</span>
+<span class="fc" id="L42">        return contractDuration;</span>
     }
 
     //check if all given values are valid
     public static boolean contractIsValid(Team teamName, Player player, double contractPrice, int contractDuration){
-<span class="pc bpc" id="L45" title="3 of 8 branches missed.">        if(teamName!=null &amp;&amp; player!=null &amp;&amp; contractPrice&gt;=0 &amp;&amp; contractDuration&gt;=0)</span>
-<span class="fc" id="L46">            return true;</span>
+<span class="pc bpc" id="L47" title="3 of 8 branches missed.">        if(teamName!=null &amp;&amp; player!=null &amp;&amp; contractPrice&gt;=0 &amp;&amp; contractDuration&gt;=0)</span>
+<span class="fc" id="L48">            return true;</span>
         else
-<span class="fc" id="L48">            return false;</span>
+<span class="fc" id="L50">            return false;</span>
     }
 
     public double getPriceForYear(){
-<span class="fc" id="L52">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
-<span class="fc" id="L53">        return Double.parseDouble(df2.format(this.contractPrice/this.contractDuration));</span>
+<span class="fc" id="L54">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L55">        return Double.parseDouble(df2.format(this.contractPrice/this.contractDuration));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

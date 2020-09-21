@@ -8,6 +8,8 @@ public class Player {
     private double atBats;
     private double rbi;
 
+    Player(){}
+
     Player(String name, String position, double hits, double atBats, double rbi){
         this.playerName=name;
         this.position=position;

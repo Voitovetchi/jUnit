@@ -10,6 +10,8 @@ public class Team {
 
     private List<Player> players=new ArrayList<Player>();
 
+    Team(){}
+
     Team(String teamName, String league, String division, int wins){
         this.teamName=teamName;
         this.league=league;

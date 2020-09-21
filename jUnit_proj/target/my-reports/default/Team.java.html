@@ -10,55 +10,57 @@ public class Team {
 
 <span class="fc" id="L11">    private List&lt;Player&gt; players=new ArrayList&lt;Player&gt;();</span>
 
-<span class="fc" id="L13">    Team(String teamName, String league, String division, int wins){</span>
-<span class="fc" id="L14">        this.teamName=teamName;</span>
-<span class="fc" id="L15">        this.league=league;</span>
-<span class="fc" id="L16">        this.division=division;</span>
-<span class="fc" id="L17">        this.wins=wins;</span>
-<span class="fc" id="L18">    }</span>
+<span class="fc" id="L13">    Team(){}</span>
+
+<span class="fc" id="L15">    Team(String teamName, String league, String division, int wins){</span>
+<span class="fc" id="L16">        this.teamName=teamName;</span>
+<span class="fc" id="L17">        this.league=league;</span>
+<span class="fc" id="L18">        this.division=division;</span>
+<span class="fc" id="L19">        this.wins=wins;</span>
+<span class="fc" id="L20">    }</span>
 
     public void setTeamName(String teamName) {
-<span class="nc" id="L21">        this.teamName = teamName;</span>
-<span class="nc" id="L22">    }</span>
+<span class="fc" id="L23">        this.teamName = teamName;</span>
+<span class="fc" id="L24">    }</span>
     public void setLeague(String league) {
-<span class="nc" id="L24">        this.league = league;</span>
-<span class="nc" id="L25">    }</span>
+<span class="fc" id="L26">        this.league = league;</span>
+<span class="fc" id="L27">    }</span>
     public void setDivision(String division) {
-<span class="nc" id="L27">        this.division = division;</span>
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L29">        this.division = division;</span>
+<span class="fc" id="L30">    }</span>
     public void setWins(int wins) {
-<span class="nc" id="L30">        this.wins = wins;</span>
-<span class="nc" id="L31">    }</span>
+<span class="fc" id="L32">        this.wins = wins;</span>
+<span class="fc" id="L33">    }</span>
 
     public String getTeamName() {
-<span class="nc" id="L34">        return teamName;</span>
+<span class="fc" id="L36">        return teamName;</span>
     }
     public String getLeague() {
-<span class="nc" id="L37">        return league;</span>
+<span class="fc" id="L39">        return league;</span>
     }
     public String getDivision() {
-<span class="nc" id="L40">        return division;</span>
+<span class="fc" id="L42">        return division;</span>
     }
     public int getWins() {
-<span class="nc" id="L43">        return wins;</span>
+<span class="fc" id="L45">        return wins;</span>
     }
 
     //check if all given values are valid
     public static boolean teamIsValid(String teamName, String league, String division, int wins){
-<span class="pc bpc" id="L48" title="3 of 8 branches missed.">        if(teamName!=null &amp;&amp; league!=null &amp;&amp; division!=null &amp;&amp; wins&gt;=0)</span>
-<span class="fc" id="L49">            return true;</span>
+<span class="pc bpc" id="L50" title="3 of 8 branches missed.">        if(teamName!=null &amp;&amp; league!=null &amp;&amp; division!=null &amp;&amp; wins&gt;=0)</span>
+<span class="fc" id="L51">            return true;</span>
         else
-<span class="fc" id="L51">            return false;</span>
+<span class="fc" id="L53">            return false;</span>
     }
 
     //add player to list
     public void addPlayer(Player player){
-<span class="fc" id="L56">        players.add(player);</span>
-<span class="fc" id="L57">    }</span>
+<span class="fc" id="L58">        players.add(player);</span>
+<span class="fc" id="L59">    }</span>
 
     //get players number
     public int getPlayersNumber(){
-<span class="fc" id="L61">        return players.size();</span>
+<span class="fc" id="L63">        return players.size();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

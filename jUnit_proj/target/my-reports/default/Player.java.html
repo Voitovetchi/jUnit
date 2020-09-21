@@ -8,64 +8,66 @@ public class Player {
     private double atBats;
     private double rbi;
 
-<span class="fc" id="L11">    Player(String name, String position, double hits, double atBats, double rbi){</span>
-<span class="fc" id="L12">        this.playerName=name;</span>
-<span class="fc" id="L13">        this.position=position;</span>
-<span class="fc" id="L14">        this.hits=hits;</span>
-<span class="fc" id="L15">        this.atBats=atBats;</span>
-<span class="fc" id="L16">        this.rbi=rbi;</span>
-<span class="fc" id="L17">    }</span>
+<span class="fc" id="L11">    Player(){}</span>
+
+<span class="fc" id="L13">    Player(String name, String position, double hits, double atBats, double rbi){</span>
+<span class="fc" id="L14">        this.playerName=name;</span>
+<span class="fc" id="L15">        this.position=position;</span>
+<span class="fc" id="L16">        this.hits=hits;</span>
+<span class="fc" id="L17">        this.atBats=atBats;</span>
+<span class="fc" id="L18">        this.rbi=rbi;</span>
+<span class="fc" id="L19">    }</span>
 
     public void setPlayerName(String playerName) {
-<span class="nc" id="L20">        this.playerName = playerName;</span>
-<span class="nc" id="L21">    }</span>
+<span class="fc" id="L22">        this.playerName = playerName;</span>
+<span class="fc" id="L23">    }</span>
     public void setPosition(String position) {
-<span class="nc" id="L23">        this.position = position;</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L25">        this.position = position;</span>
+<span class="fc" id="L26">    }</span>
     public void setHits(int hits) {
-<span class="nc" id="L26">        this.hits = hits;</span>
-<span class="nc" id="L27">    }</span>
+<span class="fc" id="L28">        this.hits = hits;</span>
+<span class="fc" id="L29">    }</span>
     public void setAtBats(int atBats) {
-<span class="nc" id="L29">        this.atBats = atBats;</span>
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L31">        this.atBats = atBats;</span>
+<span class="fc" id="L32">    }</span>
     public void setRbi(int rbi) {
-<span class="nc" id="L32">        this.rbi = rbi;</span>
-<span class="nc" id="L33">    }</span>
+<span class="fc" id="L34">        this.rbi = rbi;</span>
+<span class="fc" id="L35">    }</span>
 
     public String getPlayerName() {
-<span class="nc" id="L36">        return playerName;</span>
+<span class="fc" id="L38">        return playerName;</span>
     }
     public String getPosition() {
-<span class="nc" id="L39">        return position;</span>
+<span class="fc" id="L41">        return position;</span>
     }
     public double getHits() {
-<span class="nc" id="L42">        return hits;</span>
+<span class="fc" id="L44">        return hits;</span>
     }
     public double getAtBats() {
-<span class="nc" id="L45">        return atBats;</span>
+<span class="fc" id="L47">        return atBats;</span>
     }
     public double getRbi() {
-<span class="nc" id="L48">        return rbi;</span>
+<span class="fc" id="L50">        return rbi;</span>
     }
 
     //check if all given values are valid
     public static boolean playerIsValid(String name, String position, int hits, int atBats, int rbi){
-<span class="pc bpc" id="L53" title="4 of 10 branches missed.">        if(name!=null &amp;&amp; position!=null &amp;&amp; hits&gt;=0 &amp;&amp; atBats&gt;=0 &amp;&amp; rbi&gt;=0)</span>
-<span class="fc" id="L54">            return true;</span>
+<span class="pc bpc" id="L55" title="4 of 10 branches missed.">        if(name!=null &amp;&amp; position!=null &amp;&amp; hits&gt;=0 &amp;&amp; atBats&gt;=0 &amp;&amp; rbi&gt;=0)</span>
+<span class="fc" id="L56">            return true;</span>
         else
-<span class="fc" id="L56">            return false;</span>
+<span class="fc" id="L58">            return false;</span>
     }
 
     //get batting average for given player
     public double getAvg(){
-<span class="fc" id="L61">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
-<span class="fc" id="L62">        return Double.parseDouble(df2.format(this.hits/this.atBats));</span>
+<span class="fc" id="L63">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L64">        return Double.parseDouble(df2.format(this.hits/this.atBats));</span>
     }
 
     //get batters raiting for given player
     public  double getBattersRaiting(){
-<span class="fc" id="L67">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
-<span class="fc" id="L68">        return Double.parseDouble(df2.format(this.getAvg()+this.rbi/this.atBats));</span>
+<span class="fc" id="L69">        DecimalFormat df2 = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L70">        return Double.parseDouble(df2.format(this.getAvg()+this.rbi/this.atBats));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

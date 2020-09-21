@@ -7,6 +7,8 @@ public class Contract {
     private double contractPrice;
     private int contractDuration;
 
+    Contract(){}
+
     Contract(Team teamName, Player playerName, double contractPrice, int contractDuration){
         this.player=playerName;
         this.team=teamName;
