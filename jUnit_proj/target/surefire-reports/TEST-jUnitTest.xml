@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="jUnitTest" time="0.071" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="jUnitTest" time="0.053" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.2.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -59,14 +59,14 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="jUnitTest" name="testPlayerIsValid" time="0.018"/>
+  <testcase classname="jUnitTest" name="testPlayerIsValid" time="0.012"/>
   <testcase classname="jUnitTest" name="testTeamSetterGetter" time="0.006"/>
-  <testcase classname="jUnitTest" name="testContractIsValid" time="0.013"/>
+  <testcase classname="jUnitTest" name="testContractIsValid" time="0.001"/>
   <testcase classname="jUnitTest" name="testGetContractPriceForYear" time="0.026"/>
-  <testcase classname="jUnitTest" name="testGetBattersRaiting" time="0.002"/>
-  <testcase classname="jUnitTest" name="testTeamIsValid" time="0.001"/>
+  <testcase classname="jUnitTest" name="testGetBattersRaiting" time="0.005"/>
+  <testcase classname="jUnitTest" name="testTeamIsValid" time="0"/>
   <testcase classname="jUnitTest" name="testGetPlayersNumber" time="0.001"/>
   <testcase classname="jUnitTest" name="testPlayerSetterGetter" time="0.001"/>
-  <testcase classname="jUnitTest" name="testGetAvg" time="0.002"/>
+  <testcase classname="jUnitTest" name="testGetAvg" time="0"/>
   <testcase classname="jUnitTest" name="testContractSetterGetter" time="0.001"/>
 </testsuite>

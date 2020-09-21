@@ -19,6 +19,7 @@ public class jUnitTest {
         System.out.println("Runned "+i+" tests");
     }
 
+
     @Test
     public void testContractSetterGetter(){
         Contract con=new Contract();
@@ -66,6 +67,10 @@ public class jUnitTest {
     public void testPlayerIsValid() {
         Assert.assertEquals(true, Player.playerIsValid("Aaron Judge", "Rigthfielder", 500, 750, 100));
         Assert.assertEquals(false, Player.playerIsValid(null, "Rigthfielder", 500, 750, 100));
+        Assert.assertEquals(false, Player.playerIsValid("Aaron Judge", null, 500, 750, 100));
+        Assert.assertEquals(false, Player.playerIsValid("Aaron Judge", "Rigthfielder", -1, 750, 100));
+        Assert.assertEquals(false, Player.playerIsValid("Aaron Judge", "Rigthfielder", 500, -1, 100));
+        Assert.assertEquals(false, Player.playerIsValid("Aaron Judge", "Rigthfielder", 500, 750, -1));
     }
 
     @Test
@@ -84,6 +89,9 @@ public class jUnitTest {
     public void testTeamIsValid() {
         Assert.assertEquals(true, Team.teamIsValid("New York Yankies", "American", "Central", 7));
         Assert.assertEquals(false, Team.teamIsValid(null, "American", "Central", 7));
+        Assert.assertEquals(false, Team.teamIsValid("New York Yankies", null, "Central", 7));
+        Assert.assertEquals(false, Team.teamIsValid("New York Yankies", "American", null, 7));
+        Assert.assertEquals(false, Team.teamIsValid("New York Yankies", "American", "Central", -1));
     }
 
     @Test
@@ -100,6 +108,9 @@ public class jUnitTest {
         Team NYY=new Team("New York Yankies", "American", "Central", 7);
         Assert.assertEquals(true, Contract.contractIsValid(NYY, AaronJudge,1000000, 5));
         Assert.assertEquals(false, Contract.contractIsValid(null, AaronJudge,1000000, 5));
+        Assert.assertEquals(false, Contract.contractIsValid(NYY, null,1000000, 5));
+        Assert.assertEquals(false, Contract.contractIsValid(NYY, AaronJudge,-1, 5));
+        Assert.assertEquals(false, Contract.contractIsValid(NYY, AaronJudge,1000000, -1));
     }
 
     @Test
